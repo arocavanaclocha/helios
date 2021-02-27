@@ -26,17 +26,26 @@ The result is a matrix of pictures to compare the best lighting configuration, c
 1. Architect > Describe scenario
 * Name and Remarks of the current scenario. 
 
-2. Architect > Compose scenario lighting
+2. Architect > Compose spatial scenario
+Define the spatial matrix: 
+<p align="center">
+    <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
+</p>
+
+3. Architect > Compose scenario lighting
 Defines the LuminaireSet, that is:
 * all Luminaires available in the scenario
 * if the light is White Dimable, CCT Tunable or RGB
 * a unique name
-* and a spatial position in the scenario
-* 
-3.  Architect > Plan scenes screenplay
+* and the spatial position in the scenario relative to the Person Under Test (PUT)
+<p align="center">
+    <img src="imgs/wireframe_luminaires.png" alt="Wireframe: master with luminaires" width="500"/>
+</p>
+
+4.  Architect > Plan scenes screenplay
 Defines the different scenes. Later we will configure the light for each scene.
 
-4.  Architect > Configure light scene
+5.  Architect > Configure light scene
 For each scene, each luminaire or the whole scenario can be edited: 
 * step up/down brightness or set brightness by value
 * step up/down cct or set cct by value
@@ -47,7 +56,7 @@ For each scene, each luminaire or the whole scenario can be edited:
     <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
 </p>
 
-5. Architect > Frameset dynamics editor
+6. Architect > Frameset dynamics editor
 Define frameset sequence order and number of frameshots between scenes:
 ```
 # Scene:      |00--------------------------->01|01--------------------------->02|
