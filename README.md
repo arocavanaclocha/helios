@@ -35,6 +35,7 @@ Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob
 
 <p align="center">
     <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+    
     Experiment Procedure
 </p>
 
