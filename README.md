@@ -24,13 +24,8 @@ The goal is to achieve the best light mixing by shooting multiple camera images 
 4. Define the light scenes (different luminaire settings for defining a testing screenplay).  
 5. Define the testing screenplay determining the scene sequence (transitions between Scenes) and number of pictures between scenes (number of frames)
 6. Define the sensors data sources
-7. Show results: 
-* Portrait matrix
-* lighting configuration
-* sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
-8. Post-processing:
-* RGB histogram analysis
-* ...
+7. Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
+8. Post-processing, like RGB histogram analysis, etc
 
 
 # Wireframe  
