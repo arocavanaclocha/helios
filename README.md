@@ -39,9 +39,20 @@ For determining the whole range of light to be tested, we will define the differ
 2. Warm light coming from right
 3. Warm light coming from everywhere 
 
-After defining the seed-scenes, we will:
+Once created all scenes, you should compose scenes' lighting, editing each scene and luminaire: 
+* step up/down brightness or set brightness by value
+* step up/down cct or set cct by value
+* set rgb by value
+* turn on/off light by switching
+* balance light spatially
+
+
+After defining the scenes, we will create the Screenplay, that consists of:
 * define the sequence of scenes (e.g. [1,2,3])
 * define the ammount of frames for each transition (e.g. [25,25], 25 frames for each one of both transitions)
+This 
+Defines the different scenes. Later we will configure the light for each scene.
+
 <p align="center">
     <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
 </p>
@@ -55,44 +66,7 @@ Define frameset sequence order and number of frameshots between scenes:
 # 
 ```
 
-## Development
-
-Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |
------------- | -------------|-----------------|-----------------|-----------------
-Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).
-
-Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py).
-* Helios > Create instance
-* Helios > Development > Describe the testing scenario
-* Helios > Development > Manage Luminaires 
-<p align="center">
-    <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
-</p>
-* Helios > Development > Plan scenes' screenplay
-* Helios > Development > Compose scenes' lighting
-* Helios > Development > Frameset dynamics editor
-
-
-
-
-
-
-###  Architect > Development > Plan scenes' screenplay
-Defines the different scenes. Later we will configure the light for each scene.
-
-###   Architect > Development > Compose scenes' lighting
-For each scene, each luminaire or the whole scenario can be edited: 
-* step up/down brightness or set brightness by value
-* step up/down cct or set cct by value
-* set rgb by value
-* turn on/off light by switching
-* balance light spatially
-
-
-### Architect > Development > Frameset dynamics editor
-
-
-### Architect > Development > Frameset dynamics editor > Define each time [msec]
+Define each time [msec]
 Configure frame times following this workflow:
 * idle1: sleep time, no action
 * shot: time after the camera shot
@@ -107,10 +81,30 @@ Configure frame times following this workflow:
 #             |------------------------frame------------------------------|
 #             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
 ```
+
+## Development
+
+Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |
+------------ | -------------|-----------------|-----------------|-----------------
+Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).
+
+Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py).
+* Helios > Create instance
+* Helios > Development > Describe the testing scenario
+* Helios > Development > Manage Luminaires 
+* Helios > Development > Plan scenes' screenplay
+* Helios > Development > Compose scenes' lighting
+* Helios > Development > Frameset dynamics editor
+
+Manage Luminaires
+<p align="center">
+    <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
+</p>
+
+
 ## Production
 
 ## Post-Production
-### Intelligence 
 Show results (Portrait matrix, lighting settings, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
 
 Execute the experiment| Post-Processing
