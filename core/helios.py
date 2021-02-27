@@ -275,6 +275,7 @@ class ScenarioDirector():
         }    
     self.SpatialScenarioCube = np.zeros([spatial_scenario_cube_shape,spatial_scenario_cube_shape,spatial_scenario_cube_shape]) 
     self.created_date = datetime.now()
+    self.updated_date = self.created_date
 
   # Movie Workflow: Development, Pre-production, Production, Post production, Distribution
   def compose_lights(self):
