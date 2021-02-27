@@ -60,22 +60,22 @@ helios.Scenario.Light.set_cct(scene=scene, value=155, luminaire=-1)
 #                       .nr_frames=[25,25]
 #
 
-#Architect > Frameset dynamics editor > Define sequence and frames
+# Helios > Frameset dynamics editor > Define sequence and frames
 # Order sequence of scenes and set the number of frames for each scene transition
 helios.Scenario.Frameset.sequence=[0,1,2]
 helios.Scenario.Frameset.nr_frames=[25,25]
 
 
-#Architect > Frameset dynamics editor > Define times [msec]
+# Helios > Frameset dynamics editor > Define times [msec]
 #
 #             |------------------------frame------------------------------|
 #             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
 #
-architect.Scenario.Frameset.idle1_time = 1000
-architect.Scenario.Frameset.shoot_time=500
-architect.Scenario.Frameset.sensor_time=100
-architect.Scenario.Frameset.idle2_time=500
+helios.Scenario.Frameset.idle1_time = 1000
+helios.Scenario.Frameset.shoot_time=500
+helios.Scenario.Frameset.sensor_time=100
+helios.Scenario.Frameset.idle2_time=500
  
-movie = architect.Scenario.compose_frameset(scenes_configuration = architect.Scenario.Light.Photons,                                     
+movie = helios.Scenario.compose_frameset(scenes_configuration = architect.Scenario.Light.Photons,                                     
                                     transition_framesets = architect.Scenario.Frameset.nr_frames)
 movie
