@@ -60,8 +60,8 @@ The resulting numpy array stores the whole lighting frameset:
 # Sensor:     |X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X-|
 # Shoot:      |-X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X|
 # Time:       |00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|
-# 
 ```
+
 The last step before the execution is defining each time [msec]:
 * idle1: sleep time, no action
 * shot: time after the camera shot
@@ -71,10 +71,12 @@ The last step before the execution is defining each time [msec]:
 <p align="center">
     <img src="imgs/Frameset.png" alt="Frameset Sketch" width="500"/>
 </p>
+
 ```
 #
 #             |------------------------frame------------------------------|
 #             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
+
 ```
 
 ## Development
