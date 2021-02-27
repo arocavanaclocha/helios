@@ -1,6 +1,7 @@
 # helios - Lighting Scenario Laboratory 
 Our goal is to achieve the best mixing light for portraiting by shooting images testing with many different light configurations.
 The result is a matrix of pictures to compare the best lighting configuration,  check sensor meassurements (distance, etc) to help portrating amateurs optimizing the scene.
+
 ![Matrix portrait](https://github.com/arocavanaclocha/helios/blob/main/imgs/portrait_matrix.jpg)
 
 # Features
@@ -16,3 +17,4 @@ The result is a matrix of pictures to compare the best lighting configuration,  
 
 # Reference code
 * [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py)
+* [DMX reference code](https://github.com/MattIPv4/PyDMXControl/tree/master/tests)
