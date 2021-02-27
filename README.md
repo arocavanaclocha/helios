@@ -1,23 +1,3 @@
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-#1
-mojombo#1
-mojombo/github-flavored-markdown#1
-
-~~this~~
-
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
 
 I think you should use an
 `<addr>` element here instead.
@@ -32,7 +12,7 @@ I think you should use an
 
 ----
 # What's the point?
-The goal is to achieve the best light mixing by shooting multiple camera images with different light configurations. The result is a matrix of pictures to compare the best lighting configuration. In the meantime, log sensor meassurements (like distance, etc) will be processed to help with the analysis. The proffesionals that can be interested are portrating amateurs, imaging for data science purposes and testing laboratories for better color rendering surfaces. All of them having in common the optimization of the best light.
+> The goal is to achieve the best light mixing by shooting multiple camera images with different light configurations. The result is a matrix of pictures to compare the best lighting configuration. In the meantime, log sensor meassurements (like distance, etc) will be processed to help with the analysis. The proffesionals that can be interested are portrating amateurs, imaging for data science purposes and testing laboratories for better color rendering surfaces. All of them having in common the optimization of the best light.
 
 <p align="center">
     <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
@@ -42,6 +22,20 @@ The goal is to achieve the best light mixing by shooting multiple camera images 
 <p align="center">
     <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
 </p>
+
+First Header | Second Header
+------------ | -------------
+1. Define the testing scenario  
+2. Manage and configure each luminaire
+4. Define the light scenes (different luminaire settings for defining a testing screenplay).  
+5. Define the testing screenplay determining the scene sequence (transitions between Scenes) and number of pictures between scenes (number of frames)
+6. Define the sensors data sources
+7. Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
+8. Post-processing, like RGB histogram analysis, etc | <p align="center">
+    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+</p>
+
+
 
 1. Define the testing scenario  
 2. Manage and configure each luminaire
@@ -126,3 +120,11 @@ import helios.core.helios as helios
 # Reference code
 * [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py)
 * [DMX reference code](https://github.com/MattIPv4/PyDMXControl/tree/master/tests)
+
+
+# Status
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+- ~~things not to do~~
