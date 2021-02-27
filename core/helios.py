@@ -228,3 +228,4 @@ class FramesetEditor():
 
   def serialize(self):
     return self.FramesetParams
+
