@@ -21,7 +21,7 @@ Defines the LuminaireSet, that is:
 * and a spatial position in the scenario
 ## Architect > Plan scenes screenplay
 Defines the different scenes. Later we will configure the light for each scene.
-##  Architect > Configure light scene for each scene
+##  Architect > Configure light scene
 For each scene, each luminaire or the whole scenario can be edited: 
 * step up/down brightness or set brightness by value
 * step up/down cct or set cct by value
@@ -30,7 +30,32 @@ For each scene, each luminaire or the whole scenario can be edited:
 * balance light spatially
 ![Matrix portrait](imgs/LightComposer.png)
 
+## Architect > Frameset dynamics editor
+```
+# Scene:      |00--------------------------->01|01--------------------------->02|
+# Frame:      |00|01|02|03|04|05|06|07|08|09|10|00|01|02|03|04|05|06|07|08|09|10|
+# Sensor:     |X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X-|
+# Shoot:      |-X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X|
+# Time:       |00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|
+# 
+```
+# Scenario.Frameset
+#                       .sequence [0,1,2]
+#                       .nr_frames=[25,25]
+#
 
+## Architect > Frameset dynamics editor > Define sequence and frames
+# Order sequence of scenes and set the number of frames for each scene transition
+architect.Scenario.Frameset.sequence=[0,1,2]
+architect.Scenario.Frameset.nr_frames=[25,25]
+
+
+## Architect > Frameset dynamics editor > Define times [msec]
+```
+#
+#             |------------------------frame------------------------------|
+#             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
+```
 
 # Reference code
 * [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py)
