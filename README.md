@@ -51,7 +51,7 @@ Defines the LuminaireSet, that is:
 * all Luminaires available in the scenario
 * if the light is White Dimable, CCT Tunable or RGB
 * a unique name
-* and the spatial position in the scenario relative to the Person Under Test (PUT)
+* and the spatial position in the scenario relative to the Device or person Under Test (DUT)
 <p align="center">
     <img src="imgs/wireframe_luminaires.png" alt="Wireframe: master with luminaires" width="500"/>
 </p>
