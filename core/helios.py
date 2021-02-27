@@ -1,7 +1,7 @@
 import numpy as np
 import uuid
 import time
-
+from datetime import datetime
 
 class Luminaire():
   NR_PHOTONS = 3
@@ -274,6 +274,7 @@ class ScenarioDirector():
           "remarks": remarks
         }    
     self.SpatialScenarioCube = np.zeros([spatial_scenario_cube_shape,spatial_scenario_cube_shape,spatial_scenario_cube_shape]) 
+    self.created_date = datetime.now()
 
   # Movie Workflow: Development, Pre-production, Production, Post production, Distribution
   def compose_lights(self):
