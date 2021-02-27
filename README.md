@@ -30,10 +30,10 @@
 
 
 # Wireframe  
-PREPARE EXPERIMENT SETTINGS
-Configure scenario  | Compose scenario lighting |Plan scenes screenplay |Configure light scene |Frameset dynamics editor 
+**PREPARE EXPERIMENT SETTINGS**
+Configure scenario  | Compose scenario lighting |Plan scenes screenplay |Configure light scene |Frameset dynamics editor |Action
 ------------ | -------------|-----------------|-----------------|-----------------
-Describe and compose spatialy scenario |Manage the Luminaires' Master| Defines the different scenes. |For each scene, each luminaire or the whole scenario can be edited|Define frameset sequence order and number of frameshots between scenes
+Describe and compose spatialy the scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires.|Define frameset scenes sequence order and number of frameshots between scenes before the experiment. | Execute the experiment
 
 1. Architect > Describe scenario
 * name and remarks of the current scenario. 
