@@ -8,7 +8,7 @@ lab = LightingLab()
 #  * name and remarks  
 #  * created_date, updated_date
 #  * the spatial scenario cube, where the DUT (Device Under Test) is in the center (default shape is 3x3x3)
-helios.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", remarks="Tests for defining most appropiate light for demo.", spatial_scenario_cube_shape=3)
+lab.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", remarks="Tests for defining most appropiate light for demo.", spatial_scenario_cube_shape=3)
 
 #-------------------------------------------------------------------
 # Helios > Development > Manage Luminaires 
@@ -76,6 +76,6 @@ lab.Scenario.Frameset.shoot_time=500
 lab.Scenario.Frameset.sensor_time=100
 lab.Scenario.Frameset.idle2_time=500
  
-movie = lab.Scenario.compose_frameset(scenes_configuration = architect.Scenario.Light.Photons,                                     
-                                    transition_framesets = architect.Scenario.Frameset.nr_frames)
+movie = lab.Scenario.compose_frameset(scenes_configuration = lab.Scenario.Light.Photons,                                     
+                                    transition_framesets = lab.Scenario.Frameset.nr_frames)
 movie
