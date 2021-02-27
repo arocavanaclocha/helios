@@ -1,3 +1,5 @@
+import helios.core.helios as helios
+
 # Helios > Create instance
 lab = LightingLab()
 
@@ -8,7 +10,9 @@ lab = LightingLab()
 #  * name and remarks  
 #  * created_date, updated_date
 #  * the spatial scenario cube, where the DUT (Device Under Test) is in the center (default shape is 3x3x3)
-lab.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", remarks="Tests for defining most appropiate light for demo.", spatial_scenario_cube_shape=3)
+lab.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", 
+                 remarks="Tests for defining most appropiate light for demo.", 
+                 spatial_scenario_cube_shape=3)
 
 #-------------------------------------------------------------------
 # Helios > Development > Manage Luminaires 
