@@ -53,8 +53,8 @@ Once created all scenes, you should compose scenes' lighting, editing each scene
 
 
 After defining the scenes, we will create the Screenplay, that consists of:
-* define the sequence of scenes (e.g. [1,2,3])
-* define the ammount of frames for each transition (e.g. [25,25], 25 frames for each one of both transitions)
+* define the sequence of scenes (e.g. [0,1,2,3])
+* define the ammount of frames for each transition (e.g. [25,25,25], 25 frames for each one of both transitions)
 
 
 The resulting numpy array stores the whole lighting frameset:
