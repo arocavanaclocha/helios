@@ -8,24 +8,25 @@
 
 ----
 # What is the point of this?
-Our goal is to achieve the best light mixing by shooting multiple camera images and testing the same picture with multiple, different light configurations.
-The result is a matrix of pictures to compare the best lighting configuration, log sensor meassurements (like distance, etc) and help portrating amateurs, pictures for data science or testing laboratories for color rendering surfaces. All of them having in common the optimization of the best light.
+The goal is to achieve the best light mixing by shooting multiple camera images with different light configurations. The result is a matrix of pictures to compare the best lighting configuration. In the meantime, log sensor meassurements (like distance, etc) will be processed to help with the analysis. The proffesionals that can be interested are portrating amateurs, imaging for data science purposes and testing laboratories for better color rendering surfaces. All of them having in common the optimization of the best light.
 
 <p align="center">
     <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
 </p>
 
 # Features
-1. New/load/save scenarios with different configurations 
-2. Compose scenario lighting by configuring different DMX512 lighting Luminaires 
-3. Define different light transitions (Scenes) with different brightness, color temperature (cct) and rgb 
-4. Define camera shooting configuration and sensors to determine all possible transitions while camera shooting
-5. Show results: Portrait matrix, sensor data, lighting configuration
+1. Define the testing scenario  
+2. Manage and configure each Luminaire
+3. Define starting and ending luminaire settings (Light Scenes) 
+4. Define the transitions between Scenes (number of pictures, order of the sequence, times between pictures)
+5. Define the sensors data sources
+6. Show results: Portrait matrix, sensor data, lighting configuration
 
 # Wireframe  
 1. Architect > Describe scenario
-* Name and Remarks of the current scenario. 
-
+* name and remarks of the current scenario. 
+* creation_date, updated_date, creation_user, updated_user
+ 
 2. Architect > Compose spatial scenario
 Define the spatial matrix: 
 <p align="center">
@@ -33,6 +34,9 @@ Define the spatial matrix:
 </p>
 
 3. Architect > Compose scenario lighting
+Manage the Luminaires' Master. 
+Add/delete/edit Luminaires and configure DMX512 
+
 Defines the LuminaireSet, that is:
 * all Luminaires available in the scenario
 * if the light is White Dimable, CCT Tunable or RGB
