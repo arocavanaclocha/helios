@@ -7,6 +7,7 @@
 <h3 align="center">Lighting Scenario Laboratory.</h3>
 
 ----
+# What is the point of this?
 Our goal is to achieve the best mixing light for portraiting by shooting images testing with many different light configurations.
 The result is a matrix of pictures to compare the best lighting,  check sensor meassurements (distance, etc) and help portrating amateurs optimizing the scene.
 
@@ -67,6 +68,12 @@ architect.Scenario.Frameset.nr_frames=[25,25]
 #             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
 ```
 
+# Instalation
+```
+!git clone https://github.com/arocavanaclocha/helios.git 
+!python /content/helios/core/helios.py
+import helios.core.helios as helios
+```
 # Reference code
 * [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py)
 * [DMX reference code](https://github.com/MattIPv4/PyDMXControl/tree/master/tests)
