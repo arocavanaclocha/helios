@@ -8,11 +8,15 @@
 ----
 # What's the point?
 > The goal is to achieve the best light mixing by shooting multiple camera images with different lighting configurations. The result is a matrix of pictures for visual comparison of specialists. In the meantime, log sensor meassurements (like distance, etc) will be processed to help with the analysis. The proffesionals that can be interested are portrating amateurs, makeup artists, imaging for data science purposes and testing laboratories for better color rendering surfaces. All of them having in common the optimization of the best light.
-> The hardware will consist of [ENTTEC DMX2USB](https://www.enttec.co.uk/en/product/controls/dmx-usb-interfaces/dmx-usb-interface/) and DMX compliant luminaires.
-
 <p align="center">
     <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
 </p>
+
+# Hardware
+The hardware will consist of:
+* [ENTTEC DMX2USB](https://www.enttec.co.uk/en/product/controls/dmx-usb-interfaces/dmx-usb-interface/) 
+* DMX compliant luminaires.
+
 
 # Experiment Workflow 
 The experiment consists of 3 phases:
