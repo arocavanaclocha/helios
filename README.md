@@ -26,7 +26,7 @@ Preparing the test survey consists of defining the procedure, timming and data t
 
 The luminaires are registered in a database with its DMX512 information as well as spatial coordinates for better managing light. The light management will consist on brightness dimming, CCT (Color) tunning, setting RGB color and balancing light from different spatial locations.  
 
-For the spatial balancing of light, we will create a **spatial scenario cube** os SCC, where the DUT (Device Under Test) is in the center: 
+For the spatial balancing of light, we will create a **spatial scenario cube** or SCC, where the DUT (Device Under Test) is in the center: 
 <p align="center">
     <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
 </p>
@@ -50,13 +50,10 @@ Once created all scenes, you should compose scenes' lighting, editing each scene
 After defining the scenes, we will create the Screenplay, that consists of:
 * define the sequence of scenes (e.g. [1,2,3])
 * define the ammount of frames for each transition (e.g. [25,25], 25 frames for each one of both transitions)
-This 
-Defines the different scenes. Later we will configure the light for each scene.
 
-<p align="center">
-    <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
-</p>
-Define frameset sequence order and number of frameshots between scenes:
+
+The resulting numpy array stores the whole lighting frameset:
+
 ```
 # Scene:      |00--------------------------->01|01--------------------------->02|
 # Frame:      |00|01|02|03|04|05|06|07|08|09|10|00|01|02|03|04|05|06|07|08|09|10|
@@ -65,9 +62,7 @@ Define frameset sequence order and number of frameshots between scenes:
 # Time:       |00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|
 # 
 ```
-
-Define each time [msec]
-Configure frame times following this workflow:
+The last step before the execution is defining each time [msec]:
 * idle1: sleep time, no action
 * shot: time after the camera shot
 * sensor: time after meassuring sensors data
@@ -99,6 +94,12 @@ Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob
 Manage Luminaires
 <p align="center">
     <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
+</p>
+
+
+Light Composer
+<p align="center">
+    <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
 </p>
 
 
