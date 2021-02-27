@@ -13,7 +13,13 @@
     <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
 </p>
 
-# Features 
+# Experiment Workflow 
+The experiment consists of 3 phases:
+Development   |  Production | Results
+--------------|-------------|--------------
+Prepares the experiment Settings | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
+
+## Development Workflow
 
 Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |Execute the experiment| Post-Processing
 ------------ | -------------|-----------------|-----------------|-----------------|-----------------|-----------------
@@ -25,11 +31,11 @@ Describe and compose spatialy the whole scenario |Manage the Luminaires' Master 
 </p>
 
 
-# Detailed Wireframe  
-## Architect 
-The Architect, prepares the experiment Settings
+# Detailed Application Wireframe
 
-### Architect > Scenario > Describe the testing scenario
+## Architect > Development 
+
+### Architect > Development > Describe the testing scenario
 Define the current testing Scenario:
 * name and remarks  
 * created_date, updated_date
@@ -41,7 +47,7 @@ Define the current testing Scenario:
 The default size of the spatial scenario cube  is a 3x3 matrix. This will be used for balancing light in the xyz coordinates.
 
 
-### Architect > Scenario > Manage Luminaires 
+### Architect > Development > Manage Luminaires 
 Add/delete/edit Luminaires and configure DMX512.
 
 Defines the LuminaireSet, that is:
@@ -53,10 +59,10 @@ Defines the LuminaireSet, that is:
     <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
 </p>
 
-###  Architect > Scenario > Plan scenes' screenplay
+###  Architect > Development > Plan scenes' screenplay
 Defines the different scenes. Later we will configure the light for each scene.
 
-###   Architect > Scenario > Compose scenes' lighting
+###   Architect > Development > Compose scenes' lighting
 For each scene, each luminaire or the whole scenario can be edited: 
 * step up/down brightness or set brightness by value
 * step up/down cct or set cct by value
@@ -67,7 +73,7 @@ For each scene, each luminaire or the whole scenario can be edited:
     <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
 </p>
 
-### Architect > Scenario > Frameset dynamics editor
+### Architect > Development > Frameset dynamics editor
 Define frameset sequence order and number of frameshots between scenes:
 ```
 # Scene:      |00--------------------------->01|01--------------------------->02|
@@ -78,7 +84,7 @@ Define frameset sequence order and number of frameshots between scenes:
 # 
 ```
 
-### Architect > Frameset dynamics editor > Define each time [msec]
+### Architect > Development > Frameset dynamics editor > Define each time [msec]
 Configure frame times following this workflow:
 * idle1: sleep time, no action
 * shot: time after the camera shot
@@ -93,8 +99,9 @@ Configure frame times following this workflow:
 #             |------------------------frame------------------------------|
 #             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
 ```
+## Production
 
-## Post-Processing
+## Post-Production
 ### Intelligence 
 Show results (Portrait matrix, lighting settings, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
 
