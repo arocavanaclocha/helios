@@ -15,13 +15,9 @@
 
 # Features 
 
-1. Define the testing Scenario  
-2. Manage and configure each Luminaire
-4. Define the light Scenes (different luminaire settings for defining a testing screenplay).  
-5. Define the testing screenplay determining the scene sequence (transitions between Scenes) and number of pictures between scenes (number of frames)
-6. Define the sensors data sources
-7. Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
-8. Post-processing, like RGB histogram analysis, etc
+Define the testing Scenario    | Manage and configure each Luminaire |Plan scenes' screenplay |Configure light for each scene |Frameset dynamics editor |Execute the experiment| Post-Processing
+------------ | -------------|-----------------|-----------------|-----------------|-----------------|-----------------
+Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).| Automate the process following the previous steps.|Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
 
 
 <p align="center">
@@ -31,10 +27,6 @@
 
 # Wireframe  
 **PREPARE EXPERIMENT SETTINGS**
-
-Configure scenario  | Compose scenario lighting |Plan scenes screenplay |Configure light scene |Frameset dynamics editor |Action
------------- | -------------|-----------------|-----------------|-----------------|-----------------
-Describe and compose spatialy the scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires.|Define frameset scenes sequence order and number of frameshots between scenes before the experiment. | Execute the experiment
 
 
 1. Architect > Describe scenario
