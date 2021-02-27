@@ -335,7 +335,7 @@ class ScenarioDirector():
     return self.Settings 
     
 
-class Helios():
+class LightingLab():
   Scenario = ScenarioDirector()
   
   def __init__(self):
