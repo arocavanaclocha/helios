@@ -58,14 +58,13 @@ Define frameset sequence order and number of frameshots between scenes:
 # 
 ```
 
-6. Architect > Frameset dynamics editor > Define sequence and frames
-# Order sequence of scenes and set the number of frames for each scene transition
-architect.Scenario.Frameset.sequence=[0,1,2]
-architect.Scenario.Frameset.nr_frames=[25,25]
-
-
-7. Architect > Frameset dynamics editor > Define times [msec]
-
+7. Architect > Frameset dynamics editor > Define each time [msec]
+Configure frame times following this workflow:
+* idle1: sleep time, no action
+* shot: time after the camera shot
+* sensor: time after meassuring sensors data
+* idle2: time after finishing the whole process
+ 
 <p align="center">
     <img src="imgs/Frameset.png" alt="Frameset Sketch" width="500"/>
 </p>
