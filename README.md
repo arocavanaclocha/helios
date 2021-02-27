@@ -15,7 +15,7 @@
 
 # Features 
 
-Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Configure light for each scene |Frameset dynamics editor |Execute the experiment| Post-Processing
+Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |Execute the experiment| Post-Processing
 ------------ | -------------|-----------------|-----------------|-----------------|-----------------|-----------------
 Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).| Automate the process following the previous steps.|Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
 
@@ -33,14 +33,12 @@ The Architect, prepares the experiment Settings
 Define the current testing Scenario:
 * name and remarks  
 * created_date, updated_date
-* compose the  spatial scenario:
-
-Define the spatial cube, where the DUT (Device Under Test) is in the center: 
+* the spatial scenario cube, where the DUT (Device Under Test) is in the center: 
 <p align="center">
     <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
 </p>
 
-The default size of the spatial cube is a 3x3 matrix. This will be used for balancing light in the xyz coordinates.
+The default size of the spatial scenario cube  is a 3x3 matrix. This will be used for balancing light in the xyz coordinates.
 
 
 ### Architect > Scenario > Manage Luminaires 
@@ -49,16 +47,16 @@ Add/delete/edit Luminaires and configure DMX512.
 Defines the LuminaireSet, that is:
 * all Luminaires available in the scenario
 * if the light is White Dimable, CCT Tunable or RGB
-* a unique name
-* and the spatial position in the scenario relative to the Device or person Under Test (DUT)
+* a unique name for referencing by name
+* and the spatial scenario cube position in the scenario 
 <p align="center">
-    <img src="imgs/wireframe_luminaires.png" alt="Wireframe: master with luminaires" width="500"/>
+    <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
 </p>
 
-4.  Architect > Plan scenes screenplay
+###  Architect > Scenario > Plan scenes' screenplay
 Defines the different scenes. Later we will configure the light for each scene.
 
-5.  Architect > Compose each scene lighting
+###   Architect > Scenario > Compose scenes' lighting
 For each scene, each luminaire or the whole scenario can be edited: 
 * step up/down brightness or set brightness by value
 * step up/down cct or set cct by value
@@ -69,7 +67,7 @@ For each scene, each luminaire or the whole scenario can be edited:
     <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
 </p>
 
-6. Architect > Frameset dynamics editor
+### Architect > Scenario > Frameset dynamics editor
 Define frameset sequence order and number of frameshots between scenes:
 ```
 # Scene:      |00--------------------------->01|01--------------------------->02|
@@ -80,7 +78,7 @@ Define frameset sequence order and number of frameshots between scenes:
 # 
 ```
 
-7. Architect > Frameset dynamics editor > Define each time [msec]
+### Architect > Frameset dynamics editor > Define each time [msec]
 Configure frame times following this workflow:
 * idle1: sleep time, no action
 * shot: time after the camera shot
