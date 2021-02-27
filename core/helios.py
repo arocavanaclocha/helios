@@ -312,7 +312,7 @@ class ScenarioDirector():
     return frameset
 
 
-  def action(self, frameset):    
+  def go_action(self, frameset):    
     nr_luminaires, nr_photons, nr_frames = frameset.shape
 
     for frame in range(nr_frames):
