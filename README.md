@@ -12,7 +12,9 @@ The result is a matrix of pictures to compare the best lighting,  check sensor m
 <p align="center">
     ![Matrix portrait](imgs/portrait_matrix.jpg)
 </p>
-
+<h1 align="center" id="PyDMXControl">
+    <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
+</h1>
 
 # Features
 1. New/load/save scenarios with different configurations 
