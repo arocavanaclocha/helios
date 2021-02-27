@@ -7,20 +7,25 @@
 <h3 align="center">Lighting Scenario Laboratory.</h3>
 
 ----
-# What is the point of this?
+# What's the point?
 The goal is to achieve the best light mixing by shooting multiple camera images with different light configurations. The result is a matrix of pictures to compare the best lighting configuration. In the meantime, log sensor meassurements (like distance, etc) will be processed to help with the analysis. The proffesionals that can be interested are portrating amateurs, imaging for data science purposes and testing laboratories for better color rendering surfaces. All of them having in common the optimization of the best light.
 
 <p align="center">
     <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
 </p>
 
-# Features
+# Features 
 1. Define the testing scenario  
-2. Manage and configure each Luminaire
-3. Define starting and ending luminaire settings (Light Scenes) 
-4. Define the transitions between Scenes (number of pictures, order of the sequence, times between pictures)
+2. Manage and configure each luminaire
+3. Define the light scenes (different luminaire settings for defining a testing screenplay).  
+4. Define the testing screenplay determining the scene sequence (transitions between Scenes) and number of pictures between scenes (number of frames)
 5. Define the sensors data sources
 6. Show results: Portrait matrix, sensor data, lighting configuration
+
+<p align="center">
+    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+</p>
+
 
 # Wireframe  
 1. Architect > Describe scenario
