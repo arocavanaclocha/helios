@@ -323,7 +323,7 @@ class Architect():
     print(self.Scenario.serialize())
 
 
-  def load(self, file_name)
+  def load(self, file_name):
     pass
 
   def save(self, file_name):
