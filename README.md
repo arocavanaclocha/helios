@@ -18,17 +18,29 @@ a|d
 </p>
 
 # Features 
-<p align="center">
-    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
-</p>
 
-1. Define the testing `Scenario`  
-2. Manage and configure each `Luminaire`
-4. Define the light `Scene`s (different luminaire settings for defining a testing screenplay).  
+1. Define the testing Scenario  
+2. Manage and configure each Luminaire
+4. Define the light Scenes (different luminaire settings for defining a testing screenplay).  
 5. Define the testing screenplay determining the scene sequence (transitions between Scenes) and number of pictures between scenes (number of frames)
 6. Define the sensors data sources
 7. Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
 8. Post-processing, like RGB histogram analysis, etc
+
+
+<p align="center">
+    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+</p>
+
+```
+    Scenario
+        |
+        |--LuminaireSet
+        |--ScreenPlay
+        |--Light
+        |--Frameset
+        |--Settings
+```
 
 
 # Wireframe  
