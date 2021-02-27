@@ -15,7 +15,7 @@
 
 # Features 
 
-Describe the testing scenario    | Manage and configure each Luminaire |Plan scenes' screenplay |Configure light for each scene |Frameset dynamics editor |Execute the experiment| Post-Processing
+Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Configure light for each scene |Frameset dynamics editor |Execute the experiment| Post-Processing
 ------------ | -------------|-----------------|-----------------|-----------------|-----------------|-----------------
 Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).| Automate the process following the previous steps.|Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
 
@@ -26,23 +26,25 @@ Describe and compose spatialy the whole scenario |Manage the Luminaires' Master 
 
 
 # Detailed Wireframe  
-## Preparation of the experiment Settings
+## Architect 
+The Architect, prepares the experiment Settings
 
-1. Architect > Describe the testing scenario
+### Architect > Scenario > Describe the testing scenario
 Define the current testing Scenario:
 * name and remarks  
 * created_date, updated_date
- 
-2. Architect > Compose spatial scenario
-Define the spatial matrix. The DUT (Device Under Test) is in the center of the cube. 
+* compose the  spatial scenario:
+
+Define the spatial cube, where the DUT (Device Under Test) is in the center: 
 <p align="center">
     <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
 </p>
-The default size is a 3x3 matrix.
 
-3. Architect > Compose scenario lighting
-Manage the Luminaires' Master. 
-Add/delete/edit Luminaires and configure DMX512 
+The default size of the spatial cube is a 3x3 matrix. This will be used for balancing light in the xyz coordinates.
+
+
+### Architect > Scenario > Manage Luminaires 
+Add/delete/edit Luminaires and configure DMX512.
 
 Defines the LuminaireSet, that is:
 * all Luminaires available in the scenario
@@ -56,7 +58,7 @@ Defines the LuminaireSet, that is:
 4.  Architect > Plan scenes screenplay
 Defines the different scenes. Later we will configure the light for each scene.
 
-5.  Architect > Configure light scene
+5.  Architect > Compose each scene lighting
 For each scene, each luminaire or the whole scenario can be edited: 
 * step up/down brightness or set brightness by value
 * step up/down cct or set cct by value
