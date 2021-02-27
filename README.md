@@ -11,17 +11,17 @@ The result is a matrix of pictures to compare the best lighting,  check sensor m
 4. Define camera shooting configuration and sensors
 
 # Process 
-1. Architect > Describe scenario
+## Architect > Describe scenario
 Name and Remarks of the current scenario. 
-2. Architect > Compose scenario lighting
+## Architect > Compose scenario lighting
 Defines the LuminaireSet, that is:
 * all Luminaires available in the scenario
 * if the light is White Dimable, CCT Tunable or RGB
 * a unique name
 * and a spatial position in the scenario
-3. Architect > Plan scenes screenplay
+## Architect > Plan scenes screenplay
 Defines the different scenes. Later we will configure the light for each scene.
-4.  Architect > Configure light scene for each scene
+##  Architect > Configure light scene for each scene
 For each scene, each luminaire or the whole scenario can be edited: 
 * step up/down brightness or set brightness by value
 * step up/down cct or set cct by value
