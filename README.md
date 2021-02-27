@@ -15,17 +15,17 @@ architect.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Right lig
 architect.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Bottom light", luminaire_start_channel=4, luminaire_type=[1,1,0], luminaire_xyz=helios.Luminaire.FrontBottom())
 architect.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="RGB perimetral ambient", luminaire_start_channel=5, luminaire_type=[1,1,1], luminaire_xyz=helios.Luminaire.FrontPerimetral())
 
-## Architect > Plan scenes screenplay
+# Architect > Plan scenes screenplay
 architect.Scenario.ScreenPlay.add(scene_name="Scene #1")
 architect.Scenario.ScreenPlay.add(scene_name="Scene #2")
 
-## Architect > Configure light scene for each scene
+# Architect > Configure light scene for each scene
 architect.Scenario.compose_lights()
 
 scene = 0
-##architect.Scenario.Light
-##   ...brightness(scene=scene, step=+50, luminaire=-1)
-##   ...set_brightness(scene=scene, value=255, luminaire=-1)
+#architect.Scenario.Light
+#   ...brightness(scene=scene, step=+50, luminaire=-1)
+#   ...set_brightness(scene=scene, value=255, luminaire=-1)
 #   ...set_cct(scene=scene, value=155, luminaire=-1)
 #   ...cct(scene=scene, step=-25, luminaire=-1)
 #   ...switch(luminaire=-1)
@@ -34,11 +34,11 @@ architect.Scenario.Light.set_cct(scene=scene, value=155, luminaire=-1)
 
 #Architect > Frameset dynamics editor
 
- Scene:      |00--------------------------->01|01--------------------------->02|
- Frame:      |00|01|02|03|04|05|06|07|08|09|10|00|01|02|03|04|05|06|07|08|09|10|
- Sensor:     |X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X-|
- Shoot:      |-X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X|
- Time:       |00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|
+# Scene:      |00--------------------------->01|01--------------------------->02|
+# Frame:      |00|01|02|03|04|05|06|07|08|09|10|00|01|02|03|04|05|06|07|08|09|10|
+# Sensor:     |X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X-|
+# Shoot:      |-X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X|
+# Time:       |00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|
  
 # Scenario.Frameset
 #                       .sequence [0,1,2]
