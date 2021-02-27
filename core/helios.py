@@ -229,3 +229,86 @@ class FramesetEditor():
   def serialize(self):
     return self.FramesetParams
 
+
+class ScenarioDirector():
+  LuminaireSet = LuminairesDirector()
+  ScreenPlay = ScenesDirector()  
+  Light = LightComposer()
+  Frameset = FramesetEditor()
+  Settings = []
+  scenario_path = ""  
+
+  def __init__(self):
+    self.LuminaireSet = LuminairesDirector()
+    self.ScreenPlay = ScenesDirector()  
+    self.Light = LightComposer()
+    self.Frameset = FramesetEditor()
+
+  def new(self, name, remarks):
+    self.Settings = {
+          "id": uuid.uuid1(),
+          "name": name,
+          "remarks": remarks
+        }    
+
+  # Movie Workflow: Development, Pre-production, Production, Post production, Distribution
+  def compose_lights(self):
+    """
+      compose lights
+    """
+    self.Light.reset(self.LuminaireSet.count(), self.ScreenPlay.count())
+
+
+  def compose_frameset(self, scenes_configuration, transition_framesets):
+    """
+      scenes_configuration: array of scenes with luminaire and photon settings 
+      transition_framesets: array with nr of framesets required for each transition between scenes
+    """
+    nr_luminaires, nr_photons, nr_scenes = scenes_configuration.shape
+
+    frameset = np.zeros([nr_luminaires, nr_photons, np.sum(transition_framesets)])
+
+    for i in range(nr_scenes):
+      if(i<nr_scenes-1):
+        for j in range(len(transition_framesets)):  
+          scene_start = scenes_configuration[:,:,i]
+          scene_end = scenes_configuration[:,:,i+1]
+          gradients = (scene_start - scene_end)
+          gradients = gradients/(transition_framesets[j]-1)
+          scene_n = scene_start
+          for k in range(transition_framesets[j]):
+            if (k==0):
+              frameset[:,:,k+i*transition_framesets[j-1]] = scene_start
+            else:
+              scene_n = scene_n - gradients
+              frameset[:,:,k+i*transition_framesets[j-1]] = np.rint(scene_n)
+    
+    return frameset
+
+
+  def action(self, frameset):    
+    nr_luminaires, nr_photons, nr_frames = frameset.shape
+
+    for frame in range(nr_frames):
+      print(f'Frame {frame} start.')
+      time.sleep(self.Frameset.idle1_time/1000)
+      self.shoot()    
+      self.meassure()    
+      time.sleep(self.Frameset.idle2_time/1000)
+      print(f'End of frame {frame}.')
+  
+  def shoot(self):
+      print("shoot")
+      time.sleep(self.Frameset.shoot_time/1000)
+      
+  def meassure(self):
+      print("meassure")
+      time.sleep(self.Frameset.sensor_time/1000)
+
+  def serialize(self):
+    self.Settings["luminaires"] = self.LuminaireSet.serialize()
+    self.Settings["scenarios"] = self.ScreenPlay.serialize()
+    if(self.Light != None):
+      self.Settings["dynamics"] = self.Light.serialize()
+    return self.Settings 
+    
