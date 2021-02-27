@@ -1,7 +1,3 @@
-First Header | Second Header
------------- | -------------
-a|d
-
 <!-- Title -->
 <h1 align="center" id="helios">
     helios 
@@ -34,6 +30,11 @@ a|d
 
 
 # Wireframe  
+PREPARE EXPERIMENT SETTINGS
+Configure scenario  | Compose scenario lighting |Plan scenes screenplay |Configure light scene |Frameset dynamics editor 
+------------ | -------------|-----------------|-----------------|-----------------
+Describe and compose spatialy scenario |Manage the Luminaires' Master| Defines the different scenes. |For each scene, each luminaire or the whole scenario can be edited|Define frameset sequence order and number of frameshots between scenes
+
 1. Architect > Describe scenario
 * name and remarks of the current scenario. 
 * creation_date, updated_date, creation_user, updated_user
