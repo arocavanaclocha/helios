@@ -28,6 +28,9 @@ For each scene, each luminaire or the whole scenario can be edited:
 * set rgb by value
 * turn on/off light by switching
 * balance light spatially
+![Matrix portrait](imgs/LightComposer.png)
+
+
 
 # Reference code
 * [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py)
