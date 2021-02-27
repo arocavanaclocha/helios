@@ -1,7 +1,7 @@
 
 <!-- Title -->
 <h1 align="center" id="helios">
-    helios - Lighting Scenario Laboratory 
+    helios 
 </h1>
 <!-- Tag line -->
 <h3 align="center">Lighting Scenario Laboratory.</h3>
