@@ -335,7 +335,7 @@ class ScenarioDirector():
     return self.Settings 
     
 
-class Architect():
+class Helios():
   Scenario = ScenarioDirector()
   
   def __init__(self):
