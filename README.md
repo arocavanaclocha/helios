@@ -21,8 +21,10 @@ The hardware will consist of:
 # Experiment Workflow 
 The experiment consists of 3 phases:
 Development   |  Production | Results
---------------|-------------|--------------
+--------------|-------------|-------------
 Prepares the experiment Settings | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
+
+The development phase, consists of firstly, document the experiment by describing the testing scenario.
 
 Preparing the test survey consists of defining the procedure, timming and data to gather during the experiment:
 <p align="center">
@@ -94,7 +96,8 @@ Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob
 * Helios > Development > Manage Luminaires 
 * Helios > Development > Plan scenes' screenplay
 * Helios > Development > Compose scenes' lighting
-* Helios > Development > Frameset dynamics editor
+* Helios > Development > Configure screenplay dynamics
+* Helios > Production > Action
 
 Manage Luminaires
 <p align="center">
@@ -109,12 +112,17 @@ Light Composer
 
 
 ## Production
+Execute the process.
+
 
 ## Post-Production
-Show results (Portrait matrix, lighting settings, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
+Show results: 
+* Portrait matrix, 
+* lighting settings, 
+* sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
+* Other post-processing, like RGB histogram analysis, etc
 
-Execute the experiment| Post-Processing
-| Automate the process following the previous steps.|Show results (Portrait matrix, lighting settings and sensor data.
+
 
 # Model
 
