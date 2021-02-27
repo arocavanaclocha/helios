@@ -245,6 +245,26 @@ class ScenarioDirector():
     self.ScreenPlay = ScenesDirector()  
     self.Light = LightComposer()
     self.Frameset = FramesetEditor()
+    
+  @property
+  def created_date(self):
+    return self.Settings["created_date"]
+
+  @created_date.setter
+  def created_date(self, created_date):
+    self.Settings["created_date"] = created_date
+    
+  @property
+  def updated_date(self):
+    return self.Settings["updated_date"]
+
+  @updated_date.setter
+  def updated_date(self, updated_date):
+    self.Settings["updated_date"] = updated_date
+    
+    
+      
+    
 
   def new(self, name, remarks):
     self.Settings = {
