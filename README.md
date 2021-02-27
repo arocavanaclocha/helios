@@ -2,7 +2,7 @@
 Our goal is to achieve the best mixing light for portraiting by shooting images testing with many different light configurations.
 The result is a matrix of pictures to compare the best lighting,  check sensor meassurements (distance, etc) and help portrating amateurs optimizing the scene.
 
-![Matrix portrait](https://github.com/arocavanaclocha/helios/blob/main/imgs/portrait_matrix.jpg)
+![Matrix portrait](imgs/portrait_matrix.jpg)
 
 # Features
 1. New/load/save scenarios with different configurations 
