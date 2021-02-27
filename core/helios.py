@@ -312,3 +312,28 @@ class ScenarioDirector():
       self.Settings["dynamics"] = self.Light.serialize()
     return self.Settings 
     
+
+class Architect():
+  Scenario = ScenarioDirector()
+  
+  def __init__(self):
+    pass
+
+  def serialize(self):
+    print(self.Scenario.serialize())
+
+
+  def load(self, file_name)
+    pass
+
+  def save(self, file_name):
+    pass
+
+  def save_as(self, file_name):
+    pass
+
+
+  def load(self, folder_path):
+    """ Returns file list of scenarios in a given folder.
+    """
+    return IO.search_files(folder_path, '.json')
