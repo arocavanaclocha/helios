@@ -8,8 +8,8 @@
 
 ----
 # What is the point of this?
-Our goal is to achieve the best mixing light for portraiting by shooting images testing with many different light configurations and spatial positions.
-The result is a matrix of pictures to compare the best lighting configuration, check sensor meassurements (distance, etc) and help portrating amateurs optimizing the scene.
+Our goal is to achieve the best light mixing by shooting multiple camera images and testing the same picture with multiple, different light configurations.
+The result is a matrix of pictures to compare the best lighting configuration, log sensor meassurements (like distance, etc) and help portrating amateurs, pictures for data science or testing laboratories for color rendering surfaces. All of them having in common the optimization of the best light.
 
 <p align="center">
     <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
