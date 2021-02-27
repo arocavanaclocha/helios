@@ -25,34 +25,34 @@ Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |C
 ------------ | -------------|-----------------|-----------------|-----------------
 Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).
 
+Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py).
+* Helios > Create instance
+* Helios > Development > Describe the testing scenario
+* Helios > Development > Manage Luminaires 
+* Helios > Development > Plan scenes' screenplay
+* Helios > Development > Compose scenes' lighting
+* Helios > Development > Frameset dynamics editor
 
 <p align="center">
     <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+    Experiment Procedure
 </p>
 
-### Architect > Development > Describe the testing scenario
-Define the current testing Scenario:
-* name and remarks  
-* created_date, updated_date
-* the spatial scenario cube, where the DUT (Device Under Test) is in the center: 
+The spatial scenario cube, where the DUT (Device Under Test) is in the center: 
 <p align="center">
     <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
 </p>
-
 The default size of the spatial scenario cube  is a 3x3 matrix. This will be used for balancing light in the xyz coordinates.
 
 
-### Architect > Development > Manage Luminaires 
+### Helios > Development > Manage Luminaires 
 Add/delete/edit Luminaires and configure DMX512.
 
-Defines the LuminaireSet, that is:
-* all Luminaires available in the scenario
-* if the light is White Dimable, CCT Tunable or RGB
-* a unique name for referencing by name
-* and the spatial scenario cube position in the scenario 
+
 <p align="center">
     <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
 </p>
+
 
 ###  Architect > Development > Plan scenes' screenplay
 Defines the different scenes. Later we will configure the light for each scene.
@@ -123,7 +123,6 @@ Execute the experiment| Post-Processing
 import helios.core.helios as helios
 ```
 # Reference code
-* [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py)
 * [DMX reference code](https://github.com/MattIPv4/PyDMXControl/tree/master/tests)
 
 
