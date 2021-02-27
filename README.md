@@ -19,23 +19,19 @@ Development   |  Production | Results
 --------------|-------------|--------------
 Prepares the experiment Settings | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
 
-## Development Workflow
-
-Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |Execute the experiment| Post-Processing
------------- | -------------|-----------------|-----------------|-----------------|-----------------|-----------------
-Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).| Automate the process following the previous steps.|Show results (Portrait matrix, lighting settings and sensor data.
+## Development
+### Summary
+Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |
+------------ | -------------|-----------------|-----------------|-----------------
+Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).
 
 
 <p align="center">
     <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
 </p>
 
-
-# Detailed Application Wireframe
-
-## Architect > Development 
-
-### Architect > Development > Describe the testing scenario
+### Detailed Application Wireframe
+##### Architect > Development > Describe the testing scenario
 Define the current testing Scenario:
 * name and remarks  
 * created_date, updated_date
@@ -105,6 +101,8 @@ Configure frame times following this workflow:
 ### Intelligence 
 Show results (Portrait matrix, lighting settings, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
 
+Execute the experiment| Post-Processing
+| Automate the process following the previous steps.|Show results (Portrait matrix, lighting settings and sensor data.
 
 # Model
 
