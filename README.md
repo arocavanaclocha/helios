@@ -3,8 +3,10 @@
 <h1 align="center" id="helios">
     helios - Lighting Scenario Laboratory 
 </h1>
+<!-- Tag line -->
+<h3 align="center">Lighting Scenario Laboratory.</h3>
 
-# helios - Lighting Scenario Laboratory 
+----
 Our goal is to achieve the best mixing light for portraiting by shooting images testing with many different light configurations.
 The result is a matrix of pictures to compare the best lighting,  check sensor meassurements (distance, etc) and help portrating amateurs optimizing the scene.
 
