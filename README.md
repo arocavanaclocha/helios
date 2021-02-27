@@ -19,6 +19,42 @@ Development   |  Production | Results
 --------------|-------------|--------------
 Prepares the experiment Settings | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
 
+Preparing the test survey consists of defining the procedure, timming and data to gather during the experiment:
+<p align="center">
+    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+</p>
+
+The luminaires are registered in a database with its DMX512 information as well as spatial coordinates for better managing light. The light management will consist on brightness dimming, CCT (Color) tunning, setting RGB color and balancing light from different spatial locations.  
+
+For the spatial balancing of light, we will create a **spatial scenario cube** os SCC, where the DUT (Device Under Test) is in the center: 
+<p align="center">
+    <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
+</p>
+The default size of the spatial scenario cube  is a 3x3 matrix. This will be used for balancing light in the xyz coordinates.
+
+Each luminaire is in one or several spatial coordinates.
+
+For determining the whole range of light to be tested, we will define the different seed-scenes, e.g.:
+1. Cold light coming from Left
+2. Warm light coming from right
+3. Warm light coming from everywhere 
+
+After defining the seed-scenes, we will:
+* define the sequence of scenes (e.g. [1,2,3])
+* define the ammount of frames for each transition (e.g. [25,25], 25 frames for each one of both transitions)
+<p align="center">
+    <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
+</p>
+Define frameset sequence order and number of frameshots between scenes:
+```
+# Scene:      |00--------------------------->01|01--------------------------->02|
+# Frame:      |00|01|02|03|04|05|06|07|08|09|10|00|01|02|03|04|05|06|07|08|09|10|
+# Sensor:     |X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X-|
+# Shoot:      |-X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X|
+# Time:       |00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|
+# 
+```
+
 ## Development
 
 Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |
@@ -29,30 +65,16 @@ Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob
 * Helios > Create instance
 * Helios > Development > Describe the testing scenario
 * Helios > Development > Manage Luminaires 
+<p align="center">
+    <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
+</p>
 * Helios > Development > Plan scenes' screenplay
 * Helios > Development > Compose scenes' lighting
 * Helios > Development > Frameset dynamics editor
 
-<p align="center">
-    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
-    
-    Experiment Procedure
-</p>
-
-The spatial scenario cube, where the DUT (Device Under Test) is in the center: 
-<p align="center">
-    <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
-</p>
-The default size of the spatial scenario cube  is a 3x3 matrix. This will be used for balancing light in the xyz coordinates.
 
 
-### Helios > Development > Manage Luminaires 
-Add/delete/edit Luminaires and configure DMX512.
 
-
-<p align="center">
-    <img src="imgs/wireframe_luminaires.png" alt="Wireframe: Manage Luminaires" width="500"/>
-</p>
 
 
 ###  Architect > Development > Plan scenes' screenplay
@@ -65,20 +87,10 @@ For each scene, each luminaire or the whole scenario can be edited:
 * set rgb by value
 * turn on/off light by switching
 * balance light spatially
-<p align="center">
-    <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
-</p>
+
 
 ### Architect > Development > Frameset dynamics editor
-Define frameset sequence order and number of frameshots between scenes:
-```
-# Scene:      |00--------------------------->01|01--------------------------->02|
-# Frame:      |00|01|02|03|04|05|06|07|08|09|10|00|01|02|03|04|05|06|07|08|09|10|
-# Sensor:     |X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X-|
-# Shoot:      |-X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X--X|
-# Time:       |00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|
-# 
-```
+
 
 ### Architect > Development > Frameset dynamics editor > Define each time [msec]
 Configure frame times following this workflow:
