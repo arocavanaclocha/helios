@@ -142,8 +142,11 @@ Show results:
 # Instalation
 ```
 !git clone https://github.com/arocavanaclocha/helios.git 
+!python /content/helios/core/IO.py
 !python /content/helios/core/helios.py
+import helios.core.IO as IO
 import helios.core.helios as helios
+    
 ```
 # Reference code
 * [DMX reference code](https://github.com/MattIPv4/PyDMXControl/tree/master/tests)
