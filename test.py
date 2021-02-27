@@ -1,7 +1,7 @@
 import helios.core.helios as helios
 
 # Helios > Create instance
-lab = LightingLab()
+lab = helios.LightingLab()
 
 #-------------------------------------------------------------------
 # Helios > Development > Describe the testing scenario
