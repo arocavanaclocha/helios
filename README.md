@@ -90,8 +90,21 @@ Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |C
 ------------ | -------------|-----------------|-----------------|-----------------
 Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).
 
+## Production
+Execute the process.
+
+
+## Post-Production
+Show results: 
+* Portrait matrix, 
+* lighting settings, 
+* sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
+* Other post-processing, like RGB histogram analysis, etc
+
+
+### Wireframe
 Follow this [test reference code](https://github.com/arocavanaclocha/helios/blob/main/test.py).
-* Helios > Create instance
+
 * Helios > Development > Describe the testing scenario
 * Helios > Development > Manage Luminaires 
 * Helios > Development > Plan scenes' screenplay
@@ -109,20 +122,6 @@ Light Composer
 <p align="center">
     <img src="imgs/LightComposer.png" alt="Light Composer Sketch" width="500"/>
 </p>
-
-
-## Production
-Execute the process.
-
-
-## Post-Production
-Show results: 
-* Portrait matrix, 
-* lighting settings, 
-* sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
-* Other post-processing, like RGB histogram analysis, etc
-
-
 
 # Model
 
