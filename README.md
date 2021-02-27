@@ -32,16 +32,6 @@ a|d
     <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
 </p>
 
-```
-    Scenario
-        |
-        |--LuminaireSet
-        |--ScreenPlay
-        |--Light
-        |--Frameset
-        |--Settings
-```
-
 
 # Wireframe  
 1. Architect > Describe scenario
@@ -107,6 +97,19 @@ Configure frame times following this workflow:
 #             |------------------------frame------------------------------|
 #             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
 ```
+
+# Model
+
+```
+    Scenario
+        |
+        |--LuminaireSet
+        |--ScreenPlay
+        |--Light
+        |--Frameset
+        |--Settings
+```
+
 
 # Instalation
 ```
