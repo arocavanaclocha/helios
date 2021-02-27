@@ -15,7 +15,7 @@
 
 # Features 
 
-Define the testing Scenario    | Manage and configure each Luminaire |Plan scenes' screenplay |Configure light for each scene |Frameset dynamics editor |Execute the experiment| Post-Processing
+Describe the testing scenario    | Manage and configure each Luminaire |Plan scenes' screenplay |Configure light for each scene |Frameset dynamics editor |Execute the experiment| Post-Processing
 ------------ | -------------|-----------------|-----------------|-----------------|-----------------|-----------------
 Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).| Automate the process following the previous steps.|Show results, like Portrait matrix, lighting configuration, sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc). Post-processing, like RGB histogram analysis, etc
 
@@ -25,19 +25,20 @@ Describe and compose spatialy the whole scenario |Manage the Luminaires' Master 
 </p>
 
 
-# Wireframe  
-**PREPARE EXPERIMENT SETTINGS**
+# Detailed Wireframe  
+## Preparation of the experiment Settings
 
-
-1. Architect > Describe scenario
-* name and remarks of the current scenario. 
-* creation_date, updated_date, creation_user, updated_user
+1. Architect > Describe the testing scenario
+Define the current testing Scenario:
+* name and remarks  
+* created_date, updated_date
  
 2. Architect > Compose spatial scenario
-Define the spatial matrix: 
+Define the spatial matrix. The DUT (Device Under Test) is in the center of the cube. 
 <p align="center">
     <img src="imgs/SpatialComposer.png" alt="Spatial Composer Sketch" width="500"/>
 </p>
+The default size is a 3x3 matrix.
 
 3. Architect > Compose scenario lighting
 Manage the Luminaires' Master. 
