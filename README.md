@@ -1,7 +1,3 @@
-
-I think you should use an
-`<addr>` element here instead.
-
 First Header | Second Header
 ------------ | -------------
 a|d
@@ -27,7 +23,7 @@ a|d
 </p>
 
 1. Define the testing scenario  
-2. Manage and configure each luminaire
+2. Manage and configure each `<luminaire>`
 4. Define the light scenes (different luminaire settings for defining a testing screenplay).  
 5. Define the testing screenplay determining the scene sequence (transitions between Scenes) and number of pictures between scenes (number of frames)
 6. Define the sensors data sources
@@ -112,8 +108,7 @@ import helios.core.helios as helios
 
 
 # Status
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-- ~~things not to do~~
+- [x] Starting goals
+- [ ] Features and wireframe 
+- [ ] list syntax required (any unordered or ordered list supported)@mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [ ] ~~things not to do~~
