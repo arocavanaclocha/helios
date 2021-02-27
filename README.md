@@ -119,13 +119,15 @@ Execute the experiment| Post-Processing
 # Model
 
 ```
-    Scenario
-        |
-        |--LuminaireSet
-        |--ScreenPlay
-        |--Light
-        |--Frameset
-        |--Settings
+    LightingLab
+        |--Scenario
+            |
+            |--LuminaireSet
+            |--ScreenPlay
+            |--Light
+            |--Frameset
+            |--Settings      
+            |--SpatialScenarioCube 
 ```
 
 
