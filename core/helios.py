@@ -238,6 +238,7 @@ class ScenarioDirector():
   Light = LightComposer()
   Frameset = FramesetEditor()
   Settings = []
+  SpatialScenarioCube = None
   scenario_path = ""  
 
   def __init__(self):
@@ -266,12 +267,13 @@ class ScenarioDirector():
       
     
 
-  def new(self, name, remarks):
+  def new(self, name, remarks, spatial_scenario_cube_shape=3):
     self.Settings = {
           "id": uuid.uuid1(),
           "name": name,
           "remarks": remarks
         }    
+    self.SpatialScenarioCube = np.zeros([spatial_scenario_cube_shape,spatial_scenario_cube_shape,spatial_scenario_cube_shape]) 
 
   # Movie Workflow: Development, Pre-production, Production, Post production, Distribution
   def compose_lights(self):
