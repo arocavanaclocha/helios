@@ -1,11 +1,11 @@
 # helios
 Lighting Scenario for Lighting Laboratory settings, Portraiting scenarios, etc.
 
-## Architect > Start
-architect = Architect()
+ # Architect > Start
+ architect = Architect()
 
-## Architect > Describe scenario
-architect.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", remarks="Tests for defining most appropiate light for demo.")
+ # Architect > Describe scenario
+ architect.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", remarks="Tests for defining most appropiate light for demo.")
 
 ## Architect > Compose scenario lighting
 architect.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Top light", luminaire_start_channel=1, luminaire_type=[1,1,0], luminaire_xyz=helios.Luminaire.FrontTop())
