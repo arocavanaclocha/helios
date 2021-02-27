@@ -15,16 +15,21 @@ The goal is to achieve the best light mixing by shooting multiple camera images 
 </p>
 
 # Features 
+<p align="center">
+    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+</p>
 1. Define the testing scenario  
 2. Manage and configure each luminaire
 3. Define the light scenes (different luminaire settings for defining a testing screenplay).  
 4. Define the testing screenplay determining the scene sequence (transitions between Scenes) and number of pictures between scenes (number of frames)
 5. Define the sensors data sources
-6. Show results: Portrait matrix, sensor data, lighting configuration
-
-<p align="center">
-    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
-</p>
+6. Show results: 
+* Portrait matrix
+* lighting configuration
+* sensor data (Linear distance, LIDAR Movements heat map, temperature & Humidity, etc)
+7. Post-processing:
+* RGB histogram analysis
+* ...
 
 
 # Wireframe  
