@@ -9,12 +9,10 @@
 ----
 Our goal is to achieve the best mixing light for portraiting by shooting images testing with many different light configurations.
 The result is a matrix of pictures to compare the best lighting,  check sensor meassurements (distance, etc) and help portrating amateurs optimizing the scene.
+
 <p align="center">
-    ![Matrix portrait](imgs/portrait_matrix.jpg)
-</p>
-<h1 align="center" id="PyDMXControl">
     <img src="imgs/portrait_matrix.jpg" alt="Matrix portrait" width="500"/>
-</h1>
+</p>
 
 # Features
 1. New/load/save scenarios with different configurations 
