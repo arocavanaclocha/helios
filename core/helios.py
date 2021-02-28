@@ -332,7 +332,7 @@ class ScenarioDirector():
     self.Settings["experiment_description"] = experiment_description
   
   
-  def text2speech(text, language):
+  def text2speech(self, text, language):
     myobj = gTTS(text=text, lang=language, slow=False) 
     sound_file = "text.wav"
     myobj.save(sound_file) 
