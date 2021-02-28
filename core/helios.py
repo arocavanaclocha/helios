@@ -5,34 +5,41 @@ from datetime import datetime
 
 class Luminaire():
   NR_PHOTONS = 3
-
-  def FrontTop():
-    xyz = np.zeros([3,3,3])
+  
+  def FrontTop(SpatialScenarioCube):
+    size = SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
     xyz[0,0,:]=1
     return xyz
 
-  def FrontLeft():
-    xyz = np.zeros([3,3,3])
+  def FrontLeft(SpatialScenarioCube):
+    size = SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
     xyz[0,:,0]=1
     return xyz
-
-  def FrontRight():
-    xyz = np.zeros([3,3,3])
-    xyz[0,:,2]=1
+  
+  def FrontRight(SpatialScenarioCube):
+    size = SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,:,size-1]=1
+    return xyz
+  
+  def FrontBottom(SpatialScenarioCube):
+    size = SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,size-1,:]=1
     return xyz
 
-  def FrontBottom():
-    xyz = np.zeros([3,3,3])
-    xyz[0,2,:]=1
-    return xyz
-
-  def FrontPerimetral():
-    xyz = np.zeros([3,3,3])
+  
+  def FrontPerimetral(SpatialScenarioCube):
+    size = SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
     xyz[0,0,:]=1
     xyz[0,:,0]=1
-    xyz[0,:,2]=1
-    xyz[0,2,:]=1
+    xyz[0,:,size-1]=1
+    xyz[0,size-1,:]=1
     return xyz
+
 
 class ScenesDirector():
   Scenes = []
