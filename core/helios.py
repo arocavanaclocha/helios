@@ -275,11 +275,12 @@ class ScenarioDirector():
     return xyz
     
 
-  def new(self, name, remarks, spatial_scenario_cube_shape=3):
+  def new(self, name, remarks, experiment_long_description, spatial_scenario_cube_shape=3):
     self.Settings = {
           "id": uuid.uuid1(),
           "name": name,
-          "remarks": remarks
+          "remarks": remarks,
+          "experiment_long_description": , experiment_long_description
         }    
     self.SpatialScenarioCube = np.zeros([spatial_scenario_cube_shape,spatial_scenario_cube_shape,spatial_scenario_cube_shape]) 
     self.created_date = datetime.now()
@@ -324,12 +325,12 @@ class ScenarioDirector():
   # AUTOMATE SURVEY EXPLANATION
   # -----------------------------------------------------
   @property
-  def experiment_description(self):
-    return self.Settings["experiment_description"]
+  def experiment_long_description(self):
+    return self.Settings["experiment_long_description"]
 
-  @experiment_description.setter
-  def experiment_description(self, experiment_description):
-    self.Settings["experiment_description"] = experiment_description
+  @experiment_long_description.setter
+  def experiment_long_description(self, experiment_long_description):
+    self.Settings["experiment_long_description"] = experiment_long_description
   
   
   def text2speech(self, text, language):
