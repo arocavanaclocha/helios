@@ -3,43 +3,9 @@ import uuid
 import time
 from datetime import datetime
 
+
 class Luminaire():
   NR_PHOTONS = 3
-  
-  def FrontTop(SpatialScenarioCube):
-    size = SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,0,:]=1
-    return xyz
-
-  def FrontLeft(SpatialScenarioCube):
-    size = SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,:,0]=1
-    return xyz
-  
-  def FrontRight(SpatialScenarioCube):
-    size = SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,:,size-1]=1
-    return xyz
-  
-  def FrontBottom(SpatialScenarioCube):
-    size = SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,size-1,:]=1
-    return xyz
-
-  
-  def FrontPerimetral(SpatialScenarioCube):
-    size = SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,0,:]=1
-    xyz[0,:,0]=1
-    xyz[0,:,size-1]=1
-    xyz[0,size-1,:]=1
-    return xyz
-
 
 class ScenesDirector():
   Scenes = []
@@ -82,6 +48,41 @@ class LuminairesDirector():
                 }
     self.Luminaires.append(luminaire)  
 
+  
+  def FrontTop(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,0,:]=1
+    return xyz
+
+  def FrontLeft(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,:,0]=1
+    return xyz
+  
+  def FrontRight(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,:,size-1]=1
+    return xyz
+  
+  def FrontBottom(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,size-1,:]=1
+    return xyz
+
+  
+  def FrontPerimetral(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,0,:]=1
+    xyz[0,:,0]=1
+    xyz[0,:,size-1]=1
+    xyz[0,size-1,:]=1
+    return xyz
+  
   def load(self, luminaires):
     pass
   
