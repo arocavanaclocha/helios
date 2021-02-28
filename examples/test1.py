@@ -1,3 +1,10 @@
+!git clone https://github.com/arocavanaclocha/helios.git 
+!python /content/helios/core/IO.py
+!python /content/helios/core/helios.py
+import helios.core.IO as IO
+import helios.core.helios as helios
+    
+  
 # Helios > Create instance
 lab = helios.LightingLab()
 
