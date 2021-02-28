@@ -20,9 +20,9 @@ The hardware will consist of:
 
 # Experiment Workflow 
 The experiment consists of 3 phases:
-Development   |  Production | Results
---------------|-------------|-------------
-Prepares the experiment Settings | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
+Development   |  Pre-Production |  Production | Results
+--------------|-------------|-------------|-------------
+Prepares the experiment Settings | Prepares the experiment explanation. | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
 
 The development phase, consists of firstly, document the experiment by describing the testing scenario (e.g. 2 lights left-right and in the front, dimable and color tunable).
 <p align="center">
@@ -92,6 +92,13 @@ The last step before the execution is defining each time [msec]:
 Describe the testing scenario    | Manage Luminaires |Plan scenes' screenplay |Compose scenes' lighting |Frameset dynamics editor |
 ------------ | -------------|-----------------|-----------------|-----------------
 Describe and compose spatialy the whole scenario |Manage the Luminaires' Master identifying luminaires and their characteristics.| Define the different lighting scenes accross the screenplay of the experiment. |For each scene, edit the combination of light brightness, CCT, RGB for all luminaires and balance light spatially from every orientation.|Define frameset scenes sequence order and number of frameshots between scenes. Define the sensors data sources to log data meanwhile. Define the timming for each task (camera shoot, sensors and idle times).
+
+## Pre-Production
+The system will explain with automatic audio, generated with text2speech, the following information:
+* explanation of the experiment goals and procedure
+* non disclosure agreement (NDA) for confidentiality purposes and other legal stuff like General Data Protection Regulation (GDPR)
+* the whole process will be recorded with the express consent of the respondent
+* to continue, the surveyed person must tell the name and give the consent.
 
 ## Production
 Execute the process.
