@@ -2,6 +2,8 @@ import numpy as np
 import uuid
 import time
 from datetime import datetime
+from gtts import gTTS 
+from IPython.display import Audio   
 
 
 class Luminaire():
@@ -238,14 +240,6 @@ class ScenarioDirector():
     self.Settings["updated_date"] = updated_date
     
   
-  @property
-  def experiment_description(self):
-    return self.Settings["experiment_description"]
-
-  @experiment_description.setter
-  def experiment_description(self, experiment_description):
-    self.Settings["experiment_description"] = experiment_description
-  
   def FrontTop(self):
     size = self.SpatialScenarioCube.shape[0]
     xyz = np.zeros([size,size,size])
@@ -325,7 +319,27 @@ class ScenarioDirector():
     
     return frameset
 
+  
+  # -----------------------------------------------------
+  # AUTOMATE SURVEY EXPLANATION
+  # -----------------------------------------------------
+  @property
+  def experiment_description(self):
+    return self.Settings["experiment_description"]
 
+  @experiment_description.setter
+  def experiment_description(self, experiment_description):
+    self.Settings["experiment_description"] = experiment_description
+  
+  
+  def text2speech(text, language):
+    myobj = gTTS(text=text, lang=language, slow=False) 
+    sound_file = "text.wav"
+    myobj.save(sound_file) 
+    return sound_file
+  
+  
+  
   def go_action(self, frameset):    
     nr_luminaires, nr_photons, nr_frames = frameset.shape
 
