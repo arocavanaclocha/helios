@@ -19,7 +19,7 @@ The hardware will consist of:
 
 
 # Experiment Workflow 
-The experiment consists of 3 phases:
+The experiment consists of these phases:
 Development   |  Pre-Production |  Production | Results
 --------------|-------------|-------------|-------------
 Prepares the experiment Settings | Prepares the experiment explanation and audio interaction. | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
