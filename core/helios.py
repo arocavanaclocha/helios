@@ -47,41 +47,7 @@ class LuminairesDirector():
                   "status": 1
                 }
     self.Luminaires.append(luminaire)  
-
-  
-  def FrontTop(self):
-    size = self.SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,0,:]=1
-    return xyz
-
-  def FrontLeft(self):
-    size = self.SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,:,0]=1
-    return xyz
-  
-  def FrontRight(self):
-    size = self.SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,:,size-1]=1
-    return xyz
-  
-  def FrontBottom(self):
-    size = self.SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,size-1,:]=1
-    return xyz
-
-  
-  def FrontPerimetral(self):
-    size = self.SpatialScenarioCube.shape[0]
-    xyz = np.zeros([size,size,size])
-    xyz[0,0,:]=1
-    xyz[0,:,0]=1
-    xyz[0,:,size-1]=1
-    xyz[0,size-1,:]=1
-    return xyz
+    
   
   def load(self, luminaires):
     pass
@@ -272,7 +238,40 @@ class ScenarioDirector():
     self.Settings["updated_date"] = updated_date
     
     
-      
+  
+  def FrontTop(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,0,:]=1
+    return xyz
+
+  def FrontLeft(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,:,0]=1
+    return xyz
+  
+  def FrontRight(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,:,size-1]=1
+    return xyz
+  
+  def FrontBottom(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,size-1,:]=1
+    return xyz
+
+  
+  def FrontPerimetral(self):
+    size = self.SpatialScenarioCube.shape[0]
+    xyz = np.zeros([size,size,size])
+    xyz[0,0,:]=1
+    xyz[0,:,0]=1
+    xyz[0,:,size-1]=1
+    xyz[0,size-1,:]=1
+    return xyz
     
 
   def new(self, name, remarks, spatial_scenario_cube_shape=3):
