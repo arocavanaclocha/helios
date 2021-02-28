@@ -30,17 +30,15 @@ The experiment consists of:
     <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="900"/>
 </p>
 
-Preparing the test survey consists of defining the procedure, timming and data to gather during the experiment. The development phase, consists of firstly, document the experiment by describing the testing scenario (e.g. 2 lights left-right and in the front, dimable and color tunable).
-<p align="center">
-    <img src="imgs/simple_2light_scenario.png" alt="Simple 2 light scenario" width="500"/>
-</p>
-
-
 The design of the experiment consists of these phases:
 Development   |  Pre-Production |  Production | Results
 --------------|-------------|-------------|-------------
 Prepares the experiment Settings | Prepares the experiment explanation and audio interaction. | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
 
+The development phase, consists of firstly, documenting the experiment by describing the testing scenario (e.g. 2 lights left-right and in the front, dimable and color tunable).
+<p align="center">
+    <img src="imgs/simple_2light_scenario.png" alt="Simple 2 light scenario" width="500"/>
+</p>
 
 The luminaires are registered in a database with its DMX512 information as well as spatial coordinates for better managing light. The light management will consist on brightness dimming, CCT (Color) tunning, setting RGB color and balancing light from different spatial locations.  
 
