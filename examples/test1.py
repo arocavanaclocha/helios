@@ -6,7 +6,7 @@ import helios.core.IO as IO
 import helios.core.helios as helios
 from IPython.display import Audio   
     
-  # Helios > Create instance
+# Helios > Create instance
 lab = helios.LightingLab()
 
 #-------------------------------------------------------------------
@@ -16,8 +16,11 @@ lab = helios.LightingLab()
 #  * name, remarks
 #  * the spatial scenario cube, where the DUT (Device Under Test) is in the center (default shape is 3x3x3)
 #  * auto: created_date, updated_date 
+experiment_long_description = "This is an example of how to automate the survey initial testing procedure."
+
 lab.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", 
-                 remarks="Tests for defining most appropiate light for demo.", 
+                 remarks="Tests for defining most appropiate light for demo.",
+                 experiment_long_description=experiment_long_description, 
                  spatial_scenario_cube_shape=3)
 
 #-------------------------------------------------------------------
@@ -93,7 +96,6 @@ movie
 #-------------------------------------------------------------------
 # Helios > Production > Action
 #-------------------------------------------------------------------
-lab.Scenario.experiment_description = "This is an example of how to automate the survey initial testing procedure."
-sound_file = lab.Scenario.text2speech(text=lab.Scenario.experiment_description, language='en')
+sound_file = lab.Scenario.text2speech(text=lab.Scenario.experiment_long_description, language='en')
 Audio( sound_file, autoplay=True)   
 #lab.Scenario.go_action(movie)
