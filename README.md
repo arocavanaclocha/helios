@@ -21,7 +21,7 @@ The hardware will consist of:
 # Experiment Workflow 
 
 The experiment consists of:
-1. The system will make an explanation, 
+1. The system will make an explanation (text2speech), 
 2. The system will ask the person under test if gives express consent of gathering their data and opinions according to local General Data Protection Regulation (GDPR). The whole process will be recorded.
 3. After the consent, the survey starts. The person will keep static during the whole process.
 4. The luminaires will change their status and in the meanwhile, the camera will take photos and the sensors will log with data for further analysis
