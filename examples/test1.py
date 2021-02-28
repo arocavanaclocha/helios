@@ -4,6 +4,7 @@
 !pip install gTTS
 import helios.core.IO as IO
 import helios.core.helios as helios
+from IPython.display import Audio   
     
   # Helios > Create instance
 lab = helios.LightingLab()
