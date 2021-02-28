@@ -1,11 +1,11 @@
 !git clone https://github.com/arocavanaclocha/helios.git 
 !python /content/helios/core/IO.py
 !python /content/helios/core/helios.py
+!pip install gTTS
 import helios.core.IO as IO
 import helios.core.helios as helios
     
-  
-# Helios > Create instance
+  # Helios > Create instance
 lab = helios.LightingLab()
 
 #-------------------------------------------------------------------
@@ -92,4 +92,7 @@ movie
 #-------------------------------------------------------------------
 # Helios > Production > Action
 #-------------------------------------------------------------------
-lab.Scenario.go_action(movie)
+lab.Scenario.experiment_description = "This is an example of how to automate the survey initial testing procedure."
+sound_file = lab.Scenario.text2speech(text=lab.Scenario.experiment_description, language='en')
+Audio( sound_file, autoplay=True)   
+#lab.Scenario.go_action(movie)
