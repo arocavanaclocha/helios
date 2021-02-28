@@ -237,7 +237,14 @@ class ScenarioDirector():
   def updated_date(self, updated_date):
     self.Settings["updated_date"] = updated_date
     
-    
+  
+  @property
+  def experiment_description(self):
+    return self.Settings["experiment_description"]
+
+  @experiment_description.setter
+  def experiment_description(self, experiment_description):
+    self.Settings["experiment_description"] = experiment_description
   
   def FrontTop(self):
     size = self.SpatialScenarioCube.shape[0]
