@@ -26,7 +26,7 @@ Prepares the experiment Settings | Prepares the experiment explanation and audio
 
 
 <p align="center">
-    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
+    <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="900"/>
 </p>
 The experiment will consists of:
 1. The system will make an explanation, 
