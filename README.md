@@ -24,23 +24,23 @@ Development   |  Pre-Production |  Production | Results
 --------------|-------------|-------------|-------------
 Prepares the experiment Settings | Prepares the experiment explanation and audio interaction. | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
 
-The development phase, consists of firstly, document the experiment by describing the testing scenario (e.g. 2 lights left-right and in the front, dimable and color tunable).
-<p align="center">
-    <img src="imgs/simple_2light_scenario.png" alt="Simple 2 light scenario" width="500"/>
-</p>
 
-Preparing the test survey consists of defining the procedure, timming and data to gather during the experiment:
 <p align="center">
     <img src="imgs/experiment_procedure.png" alt="Experiment Procedure" width="500"/>
 </p>
-The experiment will consist of:
+The experiment will consists of:
 1. The system will make an explanation, 
 2. The system will ask the person under test if gives express consent of gathering their data and opinions according to local General Data Protection Regulation (GDPR). The whole process will be recorded.
 3. After the consent, the survey starts. The person will keep static during the whole process.
 4. The luminaires will change their status and in the meanwhile, the camera will take photos and the sensors will log with data for further analysis
 
 
-In order to design the experiment, we will wollow the next steps.
+Preparing the test survey consists of defining the procedure, timming and data to gather during the experiment. The development phase, consists of firstly, document the experiment by describing the testing scenario (e.g. 2 lights left-right and in the front, dimable and color tunable).
+<p align="center">
+    <img src="imgs/simple_2light_scenario.png" alt="Simple 2 light scenario" width="500"/>
+</p>
+
+In order to design the experiment, we will follow some steps.
 
 The luminaires are registered in a database with its DMX512 information as well as spatial coordinates for better managing light. The light management will consist on brightness dimming, CCT (Color) tunning, setting RGB color and balancing light from different spatial locations.  
 
