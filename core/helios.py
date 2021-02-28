@@ -280,7 +280,7 @@ class ScenarioDirector():
           "id": uuid.uuid1(),
           "name": name,
           "remarks": remarks,
-          "experiment_long_description": , experiment_long_description
+          "experiment_long_description": experiment_long_description
         }    
     self.SpatialScenarioCube = np.zeros([spatial_scenario_cube_shape,spatial_scenario_cube_shape,spatial_scenario_cube_shape]) 
     self.created_date = datetime.now()
