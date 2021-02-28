@@ -5,9 +5,9 @@ lab = helios.LightingLab()
 # Helios > Development > Describe the testing scenario
 #-------------------------------------------------------------------
 # Define the current testing Scenario:
-#  * name and remarks  
-#  * created_date, updated_date
+#  * name, remarks
 #  * the spatial scenario cube, where the DUT (Device Under Test) is in the center (default shape is 3x3x3)
+#  * auto: created_date, updated_date 
 lab.Scenario.new(name="Scenario: Laboratory iMM (PR3808)", 
                  remarks="Tests for defining most appropiate light for demo.", 
                  spatial_scenario_cube_shape=3)
@@ -20,11 +20,11 @@ lab.Scenario.new(name="Scenario: Laboratory iMM (PR3808)",
 #  * if the light is White Dimable, CCT Tunable or RGB
 #  * a unique name for referencing by name
 #  * and the spatial scenario cube position in the scenario 
-lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Top light", luminaire_start_channel=1, luminaire_type=[1,1,0], luminaire_xyz=helios.Luminaire.FrontTop())
-lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Left light", luminaire_start_channel=2, luminaire_type=[1,1,0], luminaire_xyz=helios.Luminaire.FrontLeft())
-lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Right light", luminaire_start_channel=3, luminaire_type=[1,1,0], luminaire_xyz=helios.Luminaire.FrontRight())
-lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Bottom light", luminaire_start_channel=4, luminaire_type=[1,1,0], luminaire_xyz=helios.Luminaire.FrontBottom())
-lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="RGB perimetral ambient", luminaire_start_channel=5, luminaire_type=[1,1,1], luminaire_xyz=helios.Luminaire.FrontPerimetral())
+lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Top light", luminaire_start_channel=1, luminaire_type=[1,1,0], luminaire_xyz=lab.Scenario.FrontTop())
+lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Left light", luminaire_start_channel=2, luminaire_type=[1,1,0], luminaire_xyz=lab.Scenario.FrontLeft())
+lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Right light", luminaire_start_channel=3, luminaire_type=[1,1,0], luminaire_xyz=lab.Scenario.FrontRight())
+lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="Bottom light", luminaire_start_channel=4, luminaire_type=[1,1,0], luminaire_xyz=lab.Scenario.FrontBottom())
+lab.Scenario.LuminaireSet.add(luminaire_args=[], luminaire_name="RGB perimetral ambient", luminaire_start_channel=5, luminaire_type=[1,1,1], luminaire_xyz=lab.Scenario.FrontPerimetral())
 
 #-------------------------------------------------------------------
 # Helios > Development > Plan scenes' screenplay
@@ -48,7 +48,7 @@ scene = 0
 lab.Scenario.Light.set_cct(scene=scene, value=155, luminaire=-1)
 
 #-------------------------------------------------------------------
-# Helios > Development > Frameset dynamics editor
+# Helios > Development > Configure screenplay dynamics
 #-------------------------------------------------------------------
 #
 # Scene:      |00--------------------------->01|01--------------------------->02|
@@ -68,7 +68,7 @@ lab.Scenario.Frameset.sequence=[0,1,2]
 lab.Scenario.Frameset.nr_frames=[25,25]
 
 
-# Helios > Frameset dynamics editor > Define times [msec]
+# Define times [msec]
 #
 #             |------------------------frame------------------------------|
 #             |---------idle1---------|---shot---|-sensor-|-----idle2-----|
@@ -81,3 +81,8 @@ lab.Scenario.Frameset.idle2_time=500
 movie = lab.Scenario.compose_frameset(scenes_configuration = lab.Scenario.Light.Photons,                                     
                                     transition_framesets = lab.Scenario.Frameset.nr_frames)
 movie
+
+#-------------------------------------------------------------------
+# Helios > Production > Action
+#-------------------------------------------------------------------
+lab.Scenario.go_action(movie)
