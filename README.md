@@ -25,6 +25,9 @@ Development   |  Production | Results
 Prepares the experiment Settings | Executes the experiment | ETL (Extraction, Transformation and Load) and visualization of all data
 
 The development phase, consists of firstly, document the experiment by describing the testing scenario.
+<p align="center">
+    <img src="simple_2light_scenario.png" alt="Simple 2 light scenario" width="500"/>
+</p>
 
 Preparing the test survey consists of defining the procedure, timming and data to gather during the experiment:
 <p align="center">
